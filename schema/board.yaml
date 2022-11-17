@@ -1,0 +1,59 @@
+---
+$schema: https://json-schema.org/draft/2020-12/schema
+$id:     https://example.com/strict-tree
+type:    object
+properties:
+  mcu:
+    type: object
+    properties:
+      type:
+        type: string
+      class:
+        type: string
+        enum: [ 'rp2040', 'stm32' ]
+      clock:
+        type: number
+
+  motor:
+    type: array
+    items:
+      type: object
+      properties:
+        name:
+          type: string
+        enable:
+          type: string
+        step:
+          type: string
+        dir:
+          type: string
+        uart_pin:
+          type: string
+        tx_pin:
+          type: string
+        uart_address:
+          type: number
+    
+  limit:
+    type: object
+  
+  heater:
+    type: object
+
+  heater_bed:
+    type: object
+
+  sensor:
+    type: object
+
+  sensor_bed:
+    type: object
+
+  neopixel:
+    type: array
+    items:
+      pins:
+        type: string
+
+  aliases:
+    type: object

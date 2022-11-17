@@ -1,0 +1,62 @@
+---
+mcu:
+  type:           Raspberry Pi RP2040
+  class:          rp2040
+  clock:          12000000
+
+motor:
+  - name:         E0
+    enable:       gpio15
+    step:         gpio14
+    dir:          gpio13
+    uart_pin:     gpio9
+    tx_pin:       gpio8
+    uart_address: 3
+  - name:         X
+    enable:       gpio12
+    step:         gpio11
+    dir:          gpio10
+    uart_pin:     gpio9
+    tx_pin:       gpio8
+    uart_address: 0
+  - name:         Y
+    enable:       gpio7
+    step:         gpio6
+    dir:          gpio5
+    uart_pin:     gpio9
+    tx_pin:       gpio8
+    uart_address: 2
+  - name:         Z1
+    enable:       gpio2
+    step:         gpio19
+    dir:          gpio28
+    uart_pin:     gpio9
+    tx_pin:       gpio8
+    uart_address: 1
+  - name:         Z2
+    alias:        Z1
+
+limit:
+  DIAGX:          gpio4
+  DIAGY:          gpio3
+  DIAGZ:          gpio25
+  DIAGE0:         gpio16
+
+fan:
+  FAN1:           gpio17
+  FAN2:           gpio18
+  FAN3:           gpio20
+
+heater:
+  HE:             gpio23
+
+heater_bed:
+  HB:             gpio21
+
+sensor:
+  TH0:            gpio27
+
+sensor_bed:
+  THB:            gpio26
+
+neopixel:         [ gpio24 ]
