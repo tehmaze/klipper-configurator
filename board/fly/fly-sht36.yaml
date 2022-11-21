@@ -1,0 +1,36 @@
+---
+mcu:
+  type:   STM32F072
+  class:  stm32
+
+motor:
+  - name:   E
+    enable: PA15
+    step:   PB4
+    dir:    PB3
+    uart:   PB5
+
+spi:
+  miso:     PA6
+  mosi:     PA7
+  clock:    PA5
+  device:
+    - type: ADXL345
+      cs:   PA4
+    - type: MAX318665
+      cs:   PA3
+
+limit:
+  LIMIT_1:  PA0
+  LIMIT_2:  PA1
+  LIMIT_3:  PA2
+
+fan:
+  FAN0:     PB10
+  FAN1:     PB11
+
+heater:
+  HE0:      PA8
+
+sensor:
+  TE0:      PB0

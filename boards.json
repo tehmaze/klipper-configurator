@@ -165,6 +165,153 @@
       "gpio24"
     ]
   },
+  "fly-sht36": {
+    "mcu": {
+      "type": "STM32F072",
+      "class": "stm32"
+    },
+    "motor": [
+      {
+        "name": "E",
+        "enable": "PA15",
+        "step": "PB4",
+        "dir": "PB3",
+        "uart": "PB5"
+      }
+    ],
+    "spi": {
+      "miso": "PA6",
+      "mosi": "PA7",
+      "clock": "PA5",
+      "device": [
+        {
+          "type": "ADXL345",
+          "cs": "PA4"
+        },
+        {
+          "type": "MAX318665",
+          "cs": "PA3"
+        }
+      ]
+    },
+    "limit": {
+      "LIMIT_1": "PA0",
+      "LIMIT_2": "PA1",
+      "LIMIT_3": "PA2"
+    },
+    "fan": {
+      "FAN0": "PB10",
+      "FAN1": "PB11"
+    },
+    "heater": {
+      "HE0": "PA8"
+    },
+    "sensor": {
+      "TE0": "PB0"
+    }
+  },
+  "fly-super8": {
+    "mcu": {
+      "type": "STM32F407",
+      "class": "stm32"
+    },
+    "motor": [
+      {
+        "name": "DRIVE0",
+        "enable": "PF11",
+        "step": "PE2",
+        "dir": "PC5",
+        "uart": "PC4"
+      },
+      {
+        "name": "DRIVE1",
+        "enable": "PF14",
+        "step": "PE3",
+        "dir": "PF13",
+        "uart": "PF12"
+      },
+      {
+        "name": "DRIVE2",
+        "enable": "PG1",
+        "step": "PE4",
+        "dir": "PG0",
+        "uart": "PF15"
+      },
+      {
+        "name": "DRIVE3",
+        "enable": "PE9",
+        "step": "PE14",
+        "dir": "PE8",
+        "uart": "PE7"
+      },
+      {
+        "name": "DRIVE4",
+        "enable": "PF2",
+        "step": "PE15",
+        "dir": "PE11",
+        "uart": "PE10"
+      },
+      {
+        "name": "DRIVE5",
+        "enable": "PC15",
+        "step": "PE1",
+        "dir": "PF0",
+        "uart": "PF1"
+      },
+      {
+        "name": "DRIVE6",
+        "enable": "PG4",
+        "step": "PE0",
+        "dir": "PG3",
+        "uart": "PG2"
+      },
+      {
+        "name": "DRIVE7",
+        "enable": "PG7",
+        "step": "PE6",
+        "dir": "PG6",
+        "uart": "PG5"
+      }
+    ],
+    "limit": {
+      "IO0": "PG12",
+      "IO1": "PG11",
+      "IO2": "PG10",
+      "IO3": "PG9",
+      "IO4": "PD7",
+      "IO5": "PD6",
+      "IO6": "PA8"
+    },
+    "fan": {
+      "FAN0": "PA0",
+      "FAN1": "PA1",
+      "FAN2": "PA2",
+      "FAN3": "PA3",
+      "FAN4": "PA15",
+      "FAN5": "PB11",
+      "FAN6": "PB10",
+      "FAN7": "PD12",
+      "FAN8": "PD14",
+      "FAN9": "PD15"
+    },
+    "heater": {
+      "HEAT0": "PB0",
+      "HEAT1": "PB1",
+      "HEAT2": "PC7",
+      "HEAT3": "PF7",
+      "HEAT4": "PF6"
+    },
+    "heater_bed": {
+      "BED_OUT": "PE5"
+    },
+    "sensor": {
+      "ADC_0": "PF4",
+      "ADC_1": "PF5",
+      "ADC_2": "PF9",
+      "ADC_3": "PF10",
+      "ADC_4": "PC0"
+    }
+  },
   "fysetc-spider": {
     "mcu": {
       "type": "STM32F446",

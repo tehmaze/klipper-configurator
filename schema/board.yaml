@@ -27,9 +27,9 @@ properties:
           type: string
         dir:
           type: string
-        uart_pin:
+        cs:
           type: string
-        tx_pin:
+        uart:
           type: string
         uart_address:
           type: number
